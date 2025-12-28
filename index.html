@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>BlueOS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="scanlines"></div>
+    
+
+<div class="desktop">
+
+  <!-- Ícones -->
+  <div class="icons">
+    <div class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png">
+      <span>Terminal</span>
+    </div>
+    <div class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png">
+      <span>Arquivos</span>
+    </div>
+    <div class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2099/2099058.png">
+      <span>Config</span>
+    </div>
+  </div>
+
+  <!-- Terminal -->
+  <div class="terminal">
+    <div class="terminal-header">
+      BlueOS - Terminal
+    </div>
+
+    <div class="terminal-body" id="terminalBody">
+      BlueOS iniciado com sucesso.<br>
+      Digite <b>help</b> para ver os comandos disponíveis.
+    </div>
+
+    <div class="terminal-input">
+      <span>&gt;</span>
+      <input type="text" id="terminalInput" autofocus>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="modal hidden" id="sacrificeModal">
+  <div class="modal-window">
+    <div class="modal-header">
+      <span>Mensagem</span>
+      <button class="close-btn" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      Sou eu
+    </div>
+  </div>
+</div>
+
+<div class="modal hidden" id="imageModal">
+  <div class="modal-window" id="imageWindow">
+
+    <div class="modal-header">
+      <span>Visualização</span>
+      <button class="close-btn" onclick="closeImage()">✕</button>
+    </div>
+    <div class="modal-body image-body">
+      <img id="modalImage" src="" alt="Imagem misteriosa">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="static" id="static"></div>
+<div class="crt">
+  <div class="crt-noise"></div>
+  <div class="crt-scanlines"></div>
+  <div class="crt-flicker"></div>
+</div>
+
+
+<script>
+  const firebaseConfig = {
+      apiKey: "AIzaSyBATf77NcaZY-IDF99ij3onNHilUZ6qVBw",
+      authDomain: "zetterminal-83563.firebaseapp.com",
+      projectId: "zetterminal-83563",
+      storageBucket: "zetterminal-83563.firebasestorage.app",
+      messagingSenderId: "211917793048",
+      appId: "1:211917793048:web:90888a7a07ea967cb4606d"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+
+
+<script src="index.js"></script>
+</body>
+</html>
