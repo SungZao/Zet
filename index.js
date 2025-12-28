@@ -23,7 +23,7 @@ if (e.key === "Enter") {
     else {
   db.collection("commands").doc(cmd).get().then(doc => {
     if (!doc.exists) {
-      body.innerHTML += "<br>Comando não reconhecido.";
+      body.innerHTML += "<br>command not recognized.";
       return;
     }
 
