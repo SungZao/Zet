@@ -9,9 +9,8 @@ if (e.key === "Enter") {
 
     if (cmd === "help") {
     body.innerHTML += `
-        <br>Comandos disponíveis:
+        <br>Commands:
         <br>- help
-        <br>- clear
         <br>- whoami
     `;
     } 
