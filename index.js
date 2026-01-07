@@ -20,7 +20,7 @@ if (e.key === "Enter") {
     else if(cmd == "reaper"){
       openImageFromURL("Bilhete.png")
     }
-    else if(cmd == "FUMIKO"){
+    else if(cmd == "fumiko"){
       openImageFromURL("Diario.png")
     }
     else {
