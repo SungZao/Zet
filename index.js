@@ -20,6 +20,9 @@ if (e.key === "Enter") {
     else if(cmd == "reaper"){
       openImageFromURL("Bilhete.png")
     }
+    else if(cmd == "FUMIKO"){
+      openImageFromURL("Diario.png")
+    }
     else {
   db.collection("commands").doc(cmd).get().then(doc => {
     if (!doc.exists) {
