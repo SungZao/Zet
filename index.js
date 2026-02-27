@@ -12,12 +12,16 @@ if (e.key === "Enter") {
         <br>Commands:
         <br>- help
         <br>- whoami
+        <br>- clear
     `;
     } 
     else if (cmd === "whoami") {
     body.innerHTML += `
         <br>Root
     `;
+    } 
+    else if (cmd === "clear") {
+    body.innerHTML = ``;
     } 
     else if(cmd == "cain"){
       openImageFromURL("Cain.png")
