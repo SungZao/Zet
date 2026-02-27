@@ -14,6 +14,11 @@ if (e.key === "Enter") {
         <br>- whoami
     `;
     } 
+    else if (cmd === "whoami") {
+    body.innerHTML += `
+        <br>Root
+    `;
+    } 
     else if(cmd == "cain"){
       openImageFromURL("Cain.png")
     }
