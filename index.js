@@ -23,6 +23,9 @@ if (e.key === "Enter") {
     else if(cmd == "fumiko"){
       openImageFromURL("Diario.png")
     }
+    else if(cmd == "martin"){
+      window.location.href='https://apollo-neon-tau.vercel.app';
+    }
     else {
   db.collection("commands").doc(cmd).get().then(doc => {
     if (!doc.exists) {
